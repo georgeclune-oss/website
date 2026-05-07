@@ -483,8 +483,8 @@ function onSingleClickWMS(evt) {
     }
 }
 
-map.on('singleclick', onSingleClickFeatures);
-map.on('singleclick', onSingleClickWMS);
+//map.on('singleclick', onSingleClickFeatures);
+//map.on('singleclick', onSingleClickWMS);
 
 //get container
 var topLeftContainerDiv = document.getElementById('top-left-container')
