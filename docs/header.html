@@ -2,46 +2,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Biome:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-    header {
-        background: #002F61;
-        color: white;
-        padding: 20px;
-        width: 100%;
-    }
+   header {
+    background: #002F61;
+    color: white;
+    padding: 20px;
+    width: 100%;
+}
 
-    .header-left {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.header-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
-    .site-title {
-        font-size: 36px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        font-family: "Biome", sans-serif;
+.site-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 0;
+    font-family: "Biome", sans-serif;
+    letter-spacing: 3px;
+    font-stretch: 125%;
+}
 
-        /* Make it wider */
-        letter-spacing: 3px;
-        font-stretch: 125%;
-    }
+nav {
+    display: flex;
+    gap: 20px;
+    background: #6195BF;
+    padding: 10px;
+}
 
-    nav {
-        display: flex;
-        gap: 20px;
-        background: #6195BF;
-        padding: 10px;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-    }
+nav a:hover {
+    text-decoration: underline;
+}
 
-    nav a:hover {
-        text-decoration: underline;
-    }
 </style>
 
 <header>
