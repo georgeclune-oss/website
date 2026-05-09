@@ -33,7 +33,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    background: #6195BF;
+   
     padding: 10px;
     max-width: 100%;
     box-sizing: border-box;
@@ -56,26 +56,29 @@ nav a:hover {
     margin-left: 20px;
 }
 
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
 .search-container input {
-    padding: 6px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    padding: 8px 14px;
+    width: 220px;
+    border: 1px solid #d0d0d0;
+    border-radius: 20px;
+    font-size: 15px;
+    transition: 0.25s ease;
+    outline: none;
+    background: #ffffff;
 }
 
-.search-container button {
-    margin-left: 6px;
-    padding: 6px 10px;
-    background: #0078ff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.search-container input:focus {
+    width: 280px;
+    border-color: #0078ff;
+    box-shadow: 0 0 6px rgba(0, 120, 255, 0.3);
 }
 
-.search-container button:hover {
-    background: #005fcc;
-}
 
 
 </style>
@@ -84,21 +87,13 @@ nav a:hover {
     <div class="header-left">
         <div class="site-title">ÉIRELYTICS</div>
         <nav>
-            <a href="index.html">Maps</a>
-            <div class="search-container">
+           
+        <div class="search-container">
     <input type="text" id="site-search" placeholder="Search...">
-    <button onclick="performSearch()">🔍</button>
 </div>
+
 
         </nav>
     </div>
 </header>
-<script>
-function performSearch() {
-    const query = document.getElementById("site-search").value.trim();
-    if (query.length === 0) return;
-
-    // Redirect to Bing search for your site
-    window.location.href = `https://www.bing.com/search?q=site%3Ageorgeclune-oss.github.io+${encodeURIComponent(query)}`;
-}
-</script>
+//MAKE THE SEARCH BAR WORK WHEN SITE INDEXED
