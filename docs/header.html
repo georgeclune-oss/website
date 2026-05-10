@@ -7,17 +7,32 @@
             <a href="index.html" style="text-decoration:none; color:white;">ÉIRELYTICS</a>
         </div>
 
-        <nav>
-            <div class="search-container">
-                <input type="text" placeholder="Search..." class="search-input"
-                       onkeydown="if(event.key === 'Enter'){ handleSearch(); }">
-            </div>
-        </nav>
+       <nav>
+    <a href="data-licensing.html" class="nav-link">Data Licensing</a>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-input"
+               onkeydown="if(event.key === 'Enter'){ handleSearch(); }">
+    </div>
+</nav>
+
 
     </div>
 </header>
 
 <style>
+    .nav-link {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
     body {
     background: #EBF8FF; /* ← same background as your index page */
     margin: 0;
