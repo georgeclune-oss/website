@@ -20,7 +20,10 @@ header {
 .header-left {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    .header-left {
+    justify-content: flex-start;
+    gap: 40px;
+}
     align-items: center;
     width: 100%;
     max-width: 100%;
@@ -64,7 +67,7 @@ nav a:hover {
 .search-container {
     display: flex;
     align-items: center;
-    margin-left: -40px;
+    
 }
 
 .search-container input {
