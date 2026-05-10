@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Licensing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.html">
+    <style>
+        body {
+            background: #ECF2FF; /* same as index */
+            margin: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #002F61;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #003A75;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header-placeholder").innerHTML = data);
+    </script>
+
+    <!-- PAGE CONTENT -->
+    <div class="content-wrapper">
+
+        <h1>Data Licensing</h1>
+
+        <div class="section">
+            <div class="section-title">Overview</div>
+            <p>
+                Éirelytics provides access to high‑quality geographic and statistical datasets.
+                Some datasets are available for commercial licensing, bulk download, or custom export.
+                This page outlines how organisations and individuals can obtain licensed access.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Available Data</div>
+            <p>
+                Licensing is available for:
+                <br><br>
+                • Full national datasets<br>
+                • County‑level extracts<br>
+                • Custom‑filtered datasets<br>
+                • High‑resolution geospatial layers<br>
+                • Bulk exports of map data<br>
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Licensing Options</div>
+            <p>
+                Licensing terms can include:
+                <br><br>
+                • One‑time purchase<br>
+                • Annual commercial license<br>
+                • Academic/research license<br>
+                • API or automated access<br>
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Contact</div>
+            <p>
+                For pricing, custom requests, or commercial use cases, please contact:
+                <br><br>
+                <strong>data@eirelytics.ie</strong>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
