@@ -334,7 +334,7 @@ function onPointerMove(evt) {
     }
 };
 
-map.on('pointermove', onPointerMove);
+//map.on('pointermove', onPointerMove);
 
 var popupContent = '';
 var popupCoord = null;
@@ -483,8 +483,8 @@ function onSingleClickWMS(evt) {
     }
 }
 
-map.on('singleclick', onSingleClickFeatures);
-map.on('singleclick', onSingleClickWMS);
+//map.on('singleclick', onSingleClickFeatures);
+//map.on('singleclick', onSingleClickWMS);
 
 //get container
 var topLeftContainerDiv = document.getElementById('top-left-container')
