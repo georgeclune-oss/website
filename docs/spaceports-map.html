@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "All Churches in Ireland",
+  "description": "A complete dataset and interactive map of all 5,345 churches in Ireland across all Christian denominations.",
+  "creator": {
+    "@type": "Person",
+    "name": "George Clune"
+  },
+  "keywords": "churches in ireland, ireland churches map, catholic churches ireland, protestant churches ireland, church locations ireland"
+}
+</script>
+
+    <title>All Churches in Ireland – Interactive Map of Every Church</title>
+
+<meta name="description" content="Explore an interactive map of all 5,345 churches in Ireland, including Catholic, Protestant, and Orthodox denominations. View locations, dioceses, and county coverage.">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <style>
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .map-container {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        /* FIXED INFO BOX STYLES */
+        .info-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .info-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<script>
+fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById("header").innerHTML = data;
+  });
+</script>
+
+<div class="content">
+    <h2>Interactive Map of All Churches in Ireland</h2>
+
+    <div style="background:white;padding:15px;border-radius:10px;margin-bottom:20px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+        <b>Map Details</b><br>
+        There are 5,345 church buildings in Ireland. This map contains all churches on the Island of Ireland across multiple Christian denominations. Using Catholic diocese borders.
+    </div>
+
+    <div class="map-container">
+        <iframe src="https://georgeclune-oss.github.io/church/qgis2web_2026_05_07-17_51_19_663315/"></iframe>
+    </div>
+
+
+    <div class="info-container">
+        <div class="info-box">Total Churches: 5,345</div>
+        <div class="info-box">Counties Covered: 32</div>
+        <div class="info-box">Diocese Covered: 26</div>
+        <div class="info-box">Last Updated: May 2026</div>
+    </div>
+
+    <!-- HEADINGS + TEXT NOW BELOW INFO BOXES -->
+    <h3>How Many Churches Are in Ireland?</h3>
+    <p>
+        Ireland has over 5,345 known church buildings across 32 counties. This includes Catholic, Church of Ireland, Presbyterian, Methodist, Orthodox, and independent Christian communities. 
+        The dataset combines OpenStreetMap data, diocesan boundaries, and manual verification to ensure accuracy.
+    </p>
+
+    <h3>Church Denominations Included</h3>
+    <p>
+        The map includes all major Christian denominations in Ireland. Catholic churches form the majority, followed by Church of Ireland, Presbyterian, Methodist, and Orthodox churches.
+    </p>
+
+    <h2>Church Statistics by Region</h2>
+    <h3>Churches in Dublin</h3>
+    <h3>Churches in Cork</h3>
+    <h3>Churches in Belfast</h3>
+
+    <h2>Data Sources and Methodology</h2>
+    <p>
+        Data was sourced from OpenStreetMap, diocesan boundaries, satellite imagery, and manual corrections. The map was generated using QGIS and exported using qgis2web.
+    </p>
+</div>
+
+
+</body>
+</html>
