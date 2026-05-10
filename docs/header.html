@@ -1,6 +1,4 @@
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
 
 <header>
     <div class="header-inner">
@@ -11,10 +9,9 @@
 
         <nav>
             <div class="search-container">
-    <input type="text" placeholder="Search..." class="search-input"
-           onkeydown="if(event.key === 'Enter'){ handleSearch(); }">
-</div>
-
+                <input type="text" placeholder="Search..." class="search-input"
+                       onkeydown="if(event.key === 'Enter'){ handleSearch(); }">
+            </div>
         </nav>
 
     </div>
@@ -52,35 +49,30 @@
     .search-container {
         display: flex;
         align-items: center;
-        gap: 8px;
     }
-.search-button {
-        padding: 8px 14px;
-        background: #00509E;
-        color: white;
-        border: none;
+
+    /* RESTORED ORIGINAL EXPANDING SEARCH BAR */
+    .search-input {
+        width: 220px;
+        padding: 8px 12px;
         border-radius: 6px;
-        cursor: pointer;
+        border: 2px solid #ccc;
+        transition: width 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     }
-   .search-input {
-    width: 220px;
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: 2px solid #ccc;
-    transition: width 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
 
-.search-input:focus {
-    width: 280px;
-    border-color: #007BFF;
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
-    outline: none;
-}
-
-    
-
-    .search-button:hover {
-        background: #0066CC;
+    .search-input:focus {
+        width: 280px;
+        border-color: #007BFF;
+        box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
+        outline: none;
     }
 </style>
 
+<script>
+function handleSearch() {
+    const query = document.querySelector('.search-input').value.trim();
+    if (query !== "") {
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    }
+}
+</script>
