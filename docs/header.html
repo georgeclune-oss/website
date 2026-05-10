@@ -2,100 +2,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 
-<style>
-    body {
-    background: #ECF2FF; /* or any colour you want */
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background: #002F61; /* original header colour restored */
-    padding: 20px 0;
-    color: white;
-    font-family: Montserrat, sans-serif;
-}
-
-
-
-.header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 150px;
-}
-
-.site-title {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 0;
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 3px;
-    font-stretch: 125%;
-   
-}
-header, nav, .site-title {
-    font-family: "Montserrat", sans-serif;
-}
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 10px 0;
-    background: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-}
-
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-
-.search-container {
-    display: flex;
-    align-items: center;
-    
-}
-
-.search-container input {
-    padding: 8px 14px;
-    width: 220px;
-    border: 1px solid #d0d0d0;
-    border-radius: 20px;
-    font-size: 15px;
-    transition: 0.25s ease;
-    outline: none;
-
-    background: #ffffff; /* white search bar */
-    font-family: "Montserrat", sans-serif;
-    color: #000000;
-}
-
-.search-container input::placeholder {
-    font-family: "Montserrat", sans-serif;
-    color: #888888;
-}
-
-.search-container input:focus {
-    width: 280px;
-    border-color: #0078ff;
-    box-shadow: 0 0 6px rgba(0, 120, 255, 0.3);
-}
-
-
-
-
-
-</style>
-
 <header>
     <div class="header-inner">
 
@@ -113,4 +19,59 @@ nav a:hover {
     </div>
 </header>
 
+<style>
+    /* ORIGINAL HEADER COLOR */
+    header {
+        background: #002F61;
+        padding: 20px 0;
+        color: white;
+        font-family: Montserrat, sans-serif;
+    }
+
+    /* EXACT SPACING YOU ASKED FOR */
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 140px;   /* title distance from left */
+        padding-right: 140px;  /* search bar distance from right */
+    }
+
+    .site-title {
+        font-size: 36px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .search-input {
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: none;
+        width: 180px;
+    }
+
+    .search-button {
+        padding: 8px 14px;
+        background: #00509E;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .search-button:hover {
+        background: #0066CC;
+    }
+</style>
 
