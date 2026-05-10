@@ -19,11 +19,12 @@ header {
 
 .header-left {
     display: flex;
-    flex-direction: row;
-    .header-left {
-    justify-content: flex-start;
-    gap: -40px;
+    justify-content: space-between; /* title left, search bar right */
+    align-items: center;
+    width: 100%;
+    padding: 0 20px; /* optional clean spacing */
 }
+
     align-items: center;
     width: 100%;
     max-width: 100%;
@@ -37,7 +38,7 @@ header {
     font-family: "Montserrat", sans-serif;
     letter-spacing: 3px;
     font-stretch: 125%;
-    padding-left: 150px;
+   
 }
 header, nav, .site-title {
     font-family: "Montserrat", sans-serif;
