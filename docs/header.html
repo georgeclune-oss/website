@@ -75,7 +75,14 @@ p, li {
     margin: 0;
     padding: 0;
 }
-
+@media (max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Title and search bar align left */
+        gap: 10px;
+        padding: 10px;
+    }
     header {
         background: #105E3F;
         padding: 20px 0;
