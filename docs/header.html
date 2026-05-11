@@ -4,6 +4,14 @@
     body {
         margin: 0;
         font-family: Montserrat, sans-serif;
+        background: #ECF2FF; /* Light blue background for entire site */
+        color: #003A75; /* Data Licensing text color */
+    }
+
+    /* GLOBAL TITLE COLORS */
+    h1, h2, h3, h4, h5, h6 {
+        color: #002F61; /* Data Licensing heading color */
+        font-weight: 700;
     }
 
     /* HEADER BAR */
@@ -13,9 +21,9 @@
         padding: 20px;
         display: flex;
         align-items: center;
-        justify-content: center; /* CENTER EVERYTHING */
-        gap: 25px; /* SPACE BETWEEN TITLE + SEARCH BAR */
-        flex-wrap: wrap; /* ALLOW WRAP ON MOBILE */
+        justify-content: center; /* center-ish */
+        gap: 40px; /* spacing between title + search bar */
+        flex-wrap: wrap;
         text-align: center;
     }
 
@@ -33,7 +41,7 @@
     }
 
     .search-input {
-        width: 180px;
+        width: 200px;
         padding: 8px 12px;
         border-radius: 20px;
         border: none;
@@ -44,7 +52,7 @@
     }
 
     .search-input:focus {
-        width: 260px;
+        width: 280px;
     }
 
     /* NAVIGATION */
@@ -69,11 +77,11 @@
         opacity: 0.7;
     }
 
-    /* MOBILE TWEAKS */
+    /* MOBILE */
     @media (max-width: 700px) {
         .header-container {
+            gap: 20px;
             padding: 15px;
-            gap: 15px;
         }
 
         .site-title {
