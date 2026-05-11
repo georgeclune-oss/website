@@ -22,26 +22,6 @@
         letter-spacing: 0.5px;
     }
 
-    /* NAVIGATION */
-    nav {
-        background: #003A75;
-        padding: 12px 20px;
-        display: flex;
-        gap: 25px;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 600;
-        transition: 0.2s;
-    }
-
-    nav a:hover {
-        opacity: 0.7;
-    }
-
     /* SEARCH BAR */
     .search-container {
         position: relative;
@@ -63,6 +43,57 @@
     .search-input:focus {
         width: 260px;
     }
+
+    /* NAVIGATION */
+    nav {
+        background: #003A75;
+        padding: 12px 20px;
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        opacity: 0.7;
+    }
+
+    /* MOBILE FIXES */
+    @media (max-width: 700px) {
+
+        .header-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 12px;
+            padding: 15px;
+        }
+
+        .site-title {
+            font-size: 26px;
+        }
+
+        .search-container {
+            justify-content: center;
+            width: 100%;
+        }
+
+        .search-input {
+            width: 70%;
+            max-width: 260px;
+        }
+
+        nav {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+    }
 </style>
 
 <div class="header-container">
@@ -81,8 +112,6 @@
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="ireland-churches.html">Churches</a>
-    <a href="spaceports-map.html">Spaceports</a>
     <a href="data-licensing.html">Data Licensing</a>
 </nav>
 
