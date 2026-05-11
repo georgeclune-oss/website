@@ -18,11 +18,11 @@
     .header-container {
         background: #002F61;
         color: white;
-        padding: 20px 30px;
+        padding: 20px 25px; /* <-- pulls them closer to edges but not too far */
         display: flex;
         align-items: center;
-        justify-content: space-between; /* title left-ish, search right-ish */
-        gap: 20px; /* pulls them closer together */
+        justify-content: space-between; /* <-- RESTORES original left/right layout */
+        gap: 10px; /* <-- brings them closer together */
         flex-wrap: wrap;
     }
 
@@ -54,12 +54,12 @@
         width: 260px;
     }
 
-    /* NAVIGATION (NOW UNDER SEARCH BAR, RIGHT SIDE) */
+    /* NAVIGATION (RIGHT SIDE UNDER SEARCH BAR) */
     nav {
         background: #003A75;
-        padding: 12px 30px;
+        padding: 12px 25px;
         display: flex;
-        justify-content: flex-end; /* moves nav to the right */
+        justify-content: flex-end; /* <-- keeps nav on the right */
         gap: 25px;
         flex-wrap: wrap;
     }
@@ -127,3 +127,4 @@ function performSearch() {
     }
 }
 </script>
+
