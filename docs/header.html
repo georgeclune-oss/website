@@ -7,30 +7,29 @@
             <a href="index.html" style="text-decoration:none; color:white;">ÉIRELYTICS</a>
         </div>
 
-       <nav>
-    <a href="data-licensing.html" class="nav-link">Data Licensing</a>
+        <nav>
+            <a href="data-licensing.html" class="nav-link">Data Licensing</a>
 
-    <div class="search-container">
-        <input type="text" placeholder="Search..." class="search-input"
-               onkeydown="if(event.key === 'Enter'){ handleSearch(); }">
-    </div>
-</nav>
-
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input"
+                       onkeydown="if(event.key === 'Enter'){ handleSearch(); }">
+            </div>
+        </nav>
 
     </div>
 </header>
 
 <style>
-    /* GLOBAL HEADING COLORS */
+/* GLOBAL HEADING COLORS */
 h1, h2, h3, h4, h5, h6 {
     color: #105E3F;
     font-weight: 700;
 }
 
-    /* GLOBAL PAGE STYLING — applies to all pages */
+/* GLOBAL PAGE STYLING — applies to all pages */
 .page-wrapper, .content-wrapper {
     max-width: 900px;
-     margin: 20px auto 40px auto;
+    margin: 20px auto 40px auto;
     padding: 20px;
 }
 
@@ -38,16 +37,16 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 36px;
     font-weight: 700;
-    color: #105E3F; 
+    color: #105E3F;
     margin-bottom: 20px;
-     margin-top: 10px
+    margin-top: 10px;
 }
 
 /* Section titles */
 h2, .section-title {
     font-size: 24px;
     font-weight: 600;
-    color: #105E3F; 
+    color: #105E3F;
     margin-bottom: 10px;
 }
 
@@ -58,7 +57,7 @@ p, li {
     color: #333;
 }
 
-    .nav-link {
+.nav-link {
     margin-right: 20px;
     font-size: 18px;
     font-weight: 600;
@@ -70,16 +69,18 @@ p, li {
     text-decoration: underline;
 }
 
-    body {
-    background: #DCFFEF;  /* ← same background as your index page */
+body {
+    background: #DCFFEF;
     margin: 0;
     padding: 0;
 }
+
+/* ORIGINAL MOBILE BLOCK — restored exactly as you provided it */
 @media (max-width: 600px) {
     header {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Title and search bar align left */
+        align-items: flex-start;
         gap: 10px;
         padding: 10px;
     }
@@ -105,41 +106,38 @@ p, li {
     }
 
     nav {
-    display: flex;
-    align-items: center;
-    background: transparent; 
-}
-
+        display: flex;
+        align-items: center;
+        background: transparent;
+    }
 
     .search-container {
         display: flex;
         align-items: center;
         background: transparent;
-
     }
 
-   
     .search-input {
-    width: 220px;
-    padding: 10px 14px;
-    border-radius: 25px; 
-    border: 2px solid #ccc;
-    background: white; 
-    color: black;
-    transition: width 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
+        width: 220px;
+        padding: 10px 14px;
+        border-radius: 25px;
+        border: 2px solid #ccc;
+        background: white;
+        color: black;
+        transition: width 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.search-input::placeholder {
-    color: #888;
-}
+    .search-input::placeholder {
+        color: #888;
+    }
 
-.search-input:focus {
-    width: 280px; 
-    border-color: #007BFF;
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
-    outline: none;
+    .search-input:focus {
+        width: 280px;
+        border-color: #007BFF;
+        box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
+        outline: none;
+    }
 }
-
 </style>
 
 <script>
