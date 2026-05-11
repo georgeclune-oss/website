@@ -76,62 +76,69 @@ p, li {
     padding: 0;
 }
 @media (max-width: 600px) {
-
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Title and search bar align left */
+        gap: 10px;
+        padding: 10px;
+    }
     header {
         background: #105E3F;
-        padding: 15px;
+        padding: 20px 0;
         color: white;
         font-family: Montserrat, sans-serif;
     }
 
     .header-inner {
         display: flex;
-        flex-direction: column;   /* stack vertically */
-        align-items: flex-start;  /* align left */
-        gap: 12px;
-        padding: 0;               /* remove the 140px padding */
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 140px;
+        padding-right: 140px;
     }
 
     .site-title {
-        font-size: 28px;
+        font-size: 36px;
+        font-weight: 700;
         margin: 0;
     }
 
     nav {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-        flex-wrap: wrap;          /* allow wrapping */
-        width: 100%;
-    }
-
-    .nav-link {
-        font-size: 16px;
-        margin-right: 10px;
-    }
-
-    .search-container {
-        width: 100%;
-    }
-
-    .search-input {
-        width: 100%;
-        padding: 10px 14px;
-        border-radius: 25px;
-        border: 2px solid #ccc;
-        background: white;
-        color: black;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .search-input:focus {
-        border-color: #007BFF;
-        box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
-        outline: none;
-    }
+    display: flex;
+    align-items: center;
+    background: transparent; 
 }
 
 
+    .search-container {
+        display: flex;
+        align-items: center;
+        background: transparent;
+
+    }
+
+   
+    .search-input {
+    width: 220px;
+    padding: 10px 14px;
+    border-radius: 25px; 
+    border: 2px solid #ccc;
+    background: white; 
+    color: black;
+    transition: width 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-input:focus {
+    width: 280px; 
+    border-color: #007BFF;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.6);
+    outline: none;
+}
 
 </style>
 
