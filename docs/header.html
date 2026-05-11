@@ -4,7 +4,7 @@
     body {
         margin: 0;
         font-family: Montserrat, sans-serif;
-        background: #ECF2FF; /* Light blue background */
+        background: #ECF2FF; /* Light blue site background */
         color: #003A75; /* Data Licensing text color */
     }
 
@@ -18,19 +18,18 @@
     .header-container {
         background: #002F61;
         color: white;
-        padding: 20px 25px; /* <-- pulls them closer to edges but not too far */
+        padding: 20px 30px; /* <-- pulls both items closer to edges */
         display: flex;
         align-items: center;
-        justify-content: space-between; /* <-- RESTORES original left/right layout */
-        gap: 10px; /* <-- brings them closer together */
+        justify-content: space-around; /* <-- perfect midpoint */
         flex-wrap: wrap;
+        text-align: center;
     }
 
     .site-title {
         font-size: 28px;
         font-weight: 700;
         letter-spacing: 0.5px;
-        cursor: pointer;
     }
 
     /* SEARCH BAR */
@@ -54,12 +53,12 @@
         width: 260px;
     }
 
-    /* NAVIGATION (RIGHT SIDE UNDER SEARCH BAR) */
+    /* NAVIGATION */
     nav {
         background: #003A75;
-        padding: 12px 25px;
+        padding: 12px 20px;
         display: flex;
-        justify-content: flex-end; /* <-- keeps nav on the right */
+        justify-content: center;
         gap: 25px;
         flex-wrap: wrap;
     }
@@ -81,13 +80,8 @@
 
         .header-container {
             flex-direction: column;
-            text-align: center;
             gap: 12px;
             padding: 15px;
-        }
-
-        nav {
-            justify-content: center; /* center nav on mobile */
         }
 
         .search-input {
@@ -98,9 +92,7 @@
 </style>
 
 <div class="header-container">
-    <div class="site-title" onclick="window.location.href='index.html'">
-        ÉIRELYTICS
-    </div>
+    <div class="site-title">ÉIRELYTICS</div>
 
     <div class="search-container">
         <input 
@@ -122,9 +114,7 @@
 function performSearch() {
     const query = document.getElementById("searchInput").value.trim();
     if (query.length > 0) {
-        window.location.href = 
-            `https://www.bing.com/search?q=site:georgeclune-oss.github.io/website+${encodeURIComponent(query)}`;
+        window.location.href = `https://www.bing.com/search?q=site:georgeclune-oss.github.io/website+${encodeURIComponent(query)}`;
     }
 }
 </script>
-
