@@ -76,17 +76,27 @@ nav a:hover {
 
 /* MOBILE */
 @media (max-width: 700px) {
+
     .header-container {
-        flex-direction: column;
-        gap: 12px;
-        padding: 15px;
+        flex-direction: row; /* keep title + search bar side-by-side */
+        justify-content: space-between; /* title left, search right */
+        align-items: center;
+        padding: 15px 20px;
+        gap: 10px;
+        text-align: left;
     }
 
     .search-input {
-        width: 70%;
-        max-width: 260px;
+        width: 140px; /* fits on mobile */
+        max-width: 200px;
+    }
+
+    nav {
+        justify-content: flex-end; /* keep nav under search bar */
+        padding: 12px 40px; /* reduce huge padding */
     }
 }
+
 </style>
 
 <div class="header-container">
