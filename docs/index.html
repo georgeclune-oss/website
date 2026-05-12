@@ -82,6 +82,9 @@ fetch("header.html")
   .then(data => {
       document.getElementById("header").innerHTML = data;
   });
+    fetch("footer.html")
+  .then(r => r.text())
+  .then(d => document.getElementById("footer").innerHTML = d);
 </script>
 
 
@@ -148,6 +151,6 @@ fetch("header.html")
         <p>Find the safest countries in the world.</p>
     </div>
 </div>
-
+<div id="footer"></div>
 </body>
 </html>
