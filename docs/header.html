@@ -58,21 +58,28 @@ nav {
     color: white;
     padding: 20px 30px;
     display: flex;
-    justify-content: space-between; /* same logic as header */
+    justify-content: space-between; /* SAME AS HEADER */
     align-items: center;
     box-sizing: border-box;
 }
 
-.nav-left,
+
+.nav-left {
+    flex: 0; /* behaves like the title */
+}
+
 .nav-right {
     flex: 1; /* BOTH sides fill the width */
 }
 
 .nav-right {
+    flex: 1;               /* same as search bar */
+    max-width: 400px;      /* same as search bar */
     display: flex;
-    justify-content: flex-end; /* nav links stay on the right */
+    justify-content: flex-end;
     gap: 25px;
 }
+
 
 
 
