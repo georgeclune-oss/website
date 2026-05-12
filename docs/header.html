@@ -57,20 +57,24 @@ h1, h2, h3 {
     color: white;
     padding: 20px 30px;
     display: flex;
-    justify-content: space-between; /* SAME AS HEADER */
+    justify-content: space-between; /* same logic as header */
     align-items: center;
+
+    max-width: 1200px; /* pulls nav inward */
+    margin: 0 auto;    /* centers the whole nav */
 }
 
 .nav-left {
-    flex: 1; /* SAME WIDTH AS TITLE */
+    flex: 1; /* same as title side */
 }
 
 .nav-right {
-    flex: 1; /* SAME WIDTH AS SEARCH BAR */
+    flex: 1; /* same as search bar side */
     display: flex;
-    justify-content: flex-end; /* NAV LINKS ON THE RIGHT */
+    justify-content: flex-end;
     gap: 25px;
 }
+
 
 
 
