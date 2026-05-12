@@ -53,22 +53,27 @@ h1, h2, h3 {
 }
 
 nav {
+    width: 100%;
     background: #003A75;
     color: white;
     padding: 20px 30px;
     display: flex;
-    justify-content: space-between; /* SAME LOGIC AS HEADER */
+    justify-content: space-between; /* same logic as header */
     align-items: center;
+    box-sizing: border-box;
 }
 
-.nav-left {
-    flex: 1; /* takes up left space */
+.nav-left,
+.nav-right {
+    flex: 1; /* BOTH sides fill the width */
 }
 
 .nav-right {
     display: flex;
+    justify-content: flex-end; /* nav links stay on the right */
     gap: 25px;
 }
+
 
 
 
