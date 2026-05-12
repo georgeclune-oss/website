@@ -52,28 +52,26 @@ h1, h2, h3 {
     width: 260px;
 }
 
-/* NAVIGATION */
 .nav-container {
     background: #003A75;
     color: white;
     padding: 20px 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* SAME AS HEADER */
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .nav-left {
-    flex: 0.3;
+    flex: 1; /* SAME WIDTH AS TITLE */
 }
 
 .nav-right {
+    flex: 1; /* SAME WIDTH AS SEARCH BAR */
     display: flex;
+    justify-content: flex-end; /* NAV LINKS ON THE RIGHT */
     gap: 25px;
-    justify-content: flex-end;
-    flex: 1;
 }
+
 
 
 
@@ -141,6 +139,7 @@ nav a:hover {
         <a href="data-licensing.html">Data Licensing</a>
     </div>
 </nav>
+
 
 
 <script>
