@@ -53,16 +53,26 @@ h1, h2, h3 {
 }
 
 /* NAVIGATION */
-nav {
+.nav-container {
     background: #003A75;
     color: white;
-    padding: 20px 500px;
+    padding: 20px 30px;
     display: flex;
-    align-items: center;     /* same as header */
-    justify-content: flex-end; /* same as header */
-    flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;   /* CENTER THE WHOLE NAV BAR */
+    align-items: center;
 }
+
+.nav-left {
+    flex: 1; /* EMPTY SPACE ON LEFT */
+}
+
+.nav-right {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end; /* NAV LINKS ON THE RIGHT SIDE */
+    flex: 1;
+}
+
 
 
 
@@ -121,10 +131,14 @@ nav a:hover {
     </div>
 </div>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="data-licensing.html">Data Licensing</a>
+<nav class="nav-container">
+    <div class="nav-left"></div>
+    <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="data-licensing.html">Data Licensing</a>
+    </div>
 </nav>
+
 
 <script>
 function performSearch() {
