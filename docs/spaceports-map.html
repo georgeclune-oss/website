@@ -67,10 +67,18 @@
             text-align: center;
             font-size: 18px;
         }
-        @media (max-width: 700px) {
+      @media (max-width: 700px) {
 
     /* Page padding becomes mobile-friendly */
     body {
+        padding: 0; /* remove padding so header/footer touch edges */
+    }
+
+    /* Add padding ONLY to content, not header/footer */
+    .content,
+    .content-wrapper,
+    .main,
+    .container {
         padding: 10px 15px;
     }
 
@@ -91,17 +99,6 @@
         line-height: 1.5;
     }
 
-    /* Main content wrapper becomes full-width */
-    .content,
-    .content-wrapper,
-    .main,
-    .container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-
     /* Images, maps, iframes scale properly */
     img,
     iframe,
@@ -118,6 +115,8 @@
         overflow-x: auto;
         width: 100%;
     }
+}
+
 }
 
 
