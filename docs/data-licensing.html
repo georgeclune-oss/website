@@ -54,21 +54,37 @@
 
 @media (max-width: 700px) {
 
-    /* Prevent sideways scrolling on iPhone */
-    html, body {
+    /* Force all text and content to wrap properly */
+    body, p, h1, h2, h3, h4, h5 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+           html, body {
+        width: 100%;
+        max-width: 100%;
         overflow-x: hidden;
     }
 
-    /* Make sure no element becomes wider than the screen */
+    /* Force ALL elements to shrink inside the screen */
     * {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    /* Fix wide maps, images, iframes, tables, etc. */
-    img, iframe, table, .map-container {
-        width: 100% !important;
         max-width: 100% !important;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
+
+    /* Force the entire page content to stay inside the screen */
+    .page-wrapper,
+    .content,
+    .content-wrapper,
+    .main,
+    .container {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0 15px; /* mobile padding */
     }
 }
 
