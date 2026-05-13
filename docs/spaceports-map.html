@@ -67,6 +67,28 @@
             text-align: center;
             font-size: 18px;
         }
+         .content,
+    .content-wrapper,
+    .main,
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 10px 15px; /* mobile side spacing */
+    }
+
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Force all elements to stay inside screen */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
      @media (max-width: 700px) {
 
     /* Force all text and content to wrap properly */
