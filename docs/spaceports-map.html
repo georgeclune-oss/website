@@ -74,6 +74,20 @@
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
+           html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Force ALL elements to shrink inside the screen */
+    * {
+        max-width: 100% !important;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
 
     /* Force the entire page content to stay inside the screen */
     .page-wrapper,
