@@ -69,23 +69,57 @@
         }
         @media (max-width: 700px) {
 
-    /* Prevent sideways scrolling on iPhone */
-    html, body {
-        overflow-x: hidden;
+    /* Page padding becomes mobile-friendly */
+    body {
+        padding: 10px 15px;
     }
 
-    /* Make sure no element becomes wider than the screen */
-    * {
+    /* Headings scale down slightly */
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+
+    /* Paragraphs become easier to read on mobile */
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Main content wrapper becomes full-width */
+    .content,
+    .content-wrapper,
+    .main,
+    .container {
+        width: 100%;
         max-width: 100%;
-        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
     }
 
-    /* Fix wide maps, images, iframes, tables, etc. */
-    img, iframe, table, .map-container {
+    /* Images, maps, iframes scale properly */
+    img,
+    iframe,
+    .map-container,
+    .leaflet-container {
         width: 100% !important;
         max-width: 100% !important;
+        height: auto;
+    }
+
+    /* Tables become scrollable instead of breaking layout */
+    table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
     }
 }
+
 
     </style>
 </head>
