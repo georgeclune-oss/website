@@ -52,6 +52,25 @@
     color: #004A95;
 }
 
+@media (max-width: 700px) {
+
+    /* Prevent sideways scrolling on iPhone */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Make sure no element becomes wider than the screen */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Fix wide maps, images, iframes, tables, etc. */
+    img, iframe, table, .map-container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
 
     </style>
 </head>
