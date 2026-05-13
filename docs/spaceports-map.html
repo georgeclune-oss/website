@@ -67,55 +67,28 @@
             text-align: center;
             font-size: 18px;
         }
-      @media (max-width: 700px) {
+     @media (max-width: 700px) {
 
-    /* Page padding becomes mobile-friendly */
-    body {
-        padding: 0; /* remove padding so header/footer touch edges */
+    /* Force all text and content to wrap properly */
+    body, p, h1, h2, h3, h4, h5 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    /* Add padding ONLY to content, not header/footer */
+    /* Force the entire page content to stay inside the screen */
+    .page-wrapper,
     .content,
     .content-wrapper,
     .main,
     .container {
-        padding: 10px 15px;
-    }
-
-    /* Headings scale down slightly */
-    h1 {
-        font-size: 26px;
-    }
-    h2 {
-        font-size: 22px;
-    }
-    h3 {
-        font-size: 18px;
-    }
-
-    /* Paragraphs become easier to read on mobile */
-    p {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    /* Images, maps, iframes scale properly */
-    img,
-    iframe,
-    .map-container,
-    .leaflet-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto;
-    }
-
-    /* Tables become scrollable instead of breaking layout */
-    table {
-        display: block;
-        overflow-x: auto;
         width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0 15px; /* mobile padding */
     }
 }
+
 
 }
 
