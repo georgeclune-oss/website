@@ -1,10 +1,10 @@
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         html, body {
@@ -18,8 +18,6 @@
             font-family: Montserrat, sans-serif;
             background: #EBF8FF;
         }
-      
-
 
         nav {
             background: #333;
@@ -67,68 +65,51 @@
         .card h3 {
             margin-top: 0;
         }
-         .content,
-    .content-wrapper,
-    .main,
-    .container {
-        max-width: 100%;
-        margin: 0;
-        padding: 10px 15px; /* mobile side spacing */
-    }
 
-    /* Prevent horizontal scrolling */
-    html, body {
-        overflow-x: hidden;
-    }
+        /* GLOBAL MOBILE BEHAVIOUR (same as Spaceports + Data Licensing) */
+        .content,
+        .content-wrapper,
+        .main,
+        .container {
+            max-width: 100%;
+            margin: 0;
+            padding: 10px 15px;
+        }
 
-    /* Force all elements to stay inside screen */
-    * {
-        max-width: 100%;
-        box-sizing: border-box;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-}
-       @media (max-width: 700px) {
+        * {
+            max-width: 100%;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
 
-    /* Force all text and content to wrap properly */
-    body, p, h1, h2, h3, h4, h5 {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-           html, body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
+        @media (max-width: 700px) {
+            html, body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
 
-    /* Force ALL elements to shrink inside the screen */
-    * {
-        max-width: 100% !important;
-        box-sizing: border-box;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-    }
-}
+            * {
+                max-width: 100% !important;
+                box-sizing: border-box;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+            }
 
-    /* Force the entire page content to stay inside the screen */
-    .page-wrapper,
-    .content,
-    .content-wrapper,
-    .main,
-    .container {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0 15px; /* mobile padding */
-    }
-
-}
-
+            .page-wrapper,
+            .content,
+            .content-wrapper,
+            .main,
+            .container {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 0 15px;
+            }
+        }
     </style>
 </head>
-
 
 <body>
 
@@ -141,17 +122,15 @@ fetch("header.html")
   .then(data => {
       document.getElementById("header").innerHTML = data;
   });
-    fetch("footer.html")
+
+fetch("footer.html")
   .then(r => r.text())
   .then(d => document.getElementById("footer").innerHTML = d);
 </script>
 
-
-
 <h2 class="section-title">Global Maps</h2>
 
 <div class="grid">
-
     <div class="card" onclick="window.location='airports-map.html'">
         <h3>All Airports in the World Map</h3>
         <p>See every airport on Earth on an interactive map.</p>
@@ -166,17 +145,15 @@ fetch("header.html")
         <h3>All F1 Tracks in the World Map</h3>
         <p>Explore every Formula 1 circuit on an interactive map.</p>
     </div>
-
 </div>
 
+<h2 class="section-title">Country Specific Maps</h2>
 
-    <h2 class="section-title">Country Specific Maps</h2>
 <div class="grid">
     <div class="card" onclick="window.location='ireland-churches.html'">
-    <h3>All Churches in Ireland Map</h3>
-    <p>View every church on an interactive map.</p>
-</div>
-
+        <h3>All Churches in Ireland Map</h3>
+        <p>View every church on an interactive map.</p>
+    </div>
 
     <div class="card">
         <h3>All Public Buildings in Ireland Map</h3>
@@ -187,6 +164,7 @@ fetch("header.html")
         <h3>All Abandoned Places in Ireland Map</h3>
         <p>View all abandoned places in Ireland.</p>
     </div>
+
     <div class="card">
         <h3>All Castles in Ireland Map</h3>
         <p>View all castles in Ireland</p>
@@ -194,6 +172,7 @@ fetch("header.html")
 </div>
 
 <h2 class="section-title">Rankings</h2>
+
 <div class="grid">
     <div class="card">
         <h3>Countries by IQ</h3>
@@ -210,6 +189,9 @@ fetch("header.html")
         <p>Find the safest countries in the world.</p>
     </div>
 </div>
+
 <div id="footer"></div>
+
+</div>
 </body>
 </html>
