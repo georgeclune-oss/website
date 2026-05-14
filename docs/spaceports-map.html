@@ -2,65 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Data Licensing – Éirelytics</title>
+    <title>Data Licensing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
+   
     <style>
         body {
-            overflow-x: hidden;
+            background: #ECF2FF;
             margin: 0;
             font-family: Montserrat, sans-serif;
-            background: #f5f5f5;
+            overflow-x: hidden;
         }
 
-        /* MAIN CONTENT WRAPPER (same as Spaceports) */
-        .content {
-            max-width: 1200px;
-            margin: 30px auto;
+        .content-wrapper {
+            max-width: 900px;
+            margin: 40px auto;
             padding: 20px;
         }
 
-        /* INFO BOXES (same style as Spaceports) */
-        .info-container {
-            max-width: 1200px;
-            margin: 20px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #002F61;
+            margin-bottom: 20px;
         }
 
-        .info-box {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            text-align: center;
+        p {
             font-size: 18px;
+            line-height: 1.6;
+            color: #333;
         }
 
-        /* GLOBAL MOBILE BEHAVIOUR (identical to Spaceports) */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #003A75;
+            margin-bottom: 10px;
+        }
+
+        .email-link {
+            font-weight: 600;
+            text-decoration: underline;
+            color: #002F61;
+            text-underline-offset: 3px;
+        }
+
+        .email-link:hover {
+            color: #004A95;
+        }
+
+        /* DESKTOP DEFAULTS (your original layout) */
         .content,
         .content-wrapper,
         .main,
         .container {
-            max-width: 100%;
-            margin: 0;
-            padding: 10px 15px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        html, body {
-            overflow-x: hidden;
-        }
-
-        * {
-            max-width: 100%;
-            box-sizing: border-box;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
+        /* SPACEPORTS MOBILE BEHAVIOUR */
         @media (max-width: 700px) {
+
             html, body {
                 width: 100%;
                 max-width: 100%;
@@ -73,80 +80,87 @@
                 overflow-wrap: break-word;
                 word-wrap: break-word;
             }
-        }
 
-        .page-wrapper,
-        .content,
-        .content-wrapper,
-        .main,
-        .container {
-            width: 100%;
-            max-width: 100%;
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0 15px;
+            /* Collapse layout like Spaceports */
+            .page-wrapper,
+            .content,
+            .content-wrapper,
+            .main,
+            .container {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 0 15px;
+            }
+
+            /* Override your desktop padding */
+            .content-wrapper {
+                margin: 0;
+                padding: 0 15px;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<div id="header"></div>
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <!-- PAGE CONTENT -->
+    <div class="content-wrapper">
+
+        <h1>Data Licensing</h1>
+
+        <div class="section">
+            <div class="section-title">Overview</div>
+            <p>
+                Éirelytics provides access to high‑quality geographic and statistical datasets.
+                Some datasets are available for commercial licensing, bulk download, or custom export.
+                This page outlines how organisations and individuals can obtain licensed access.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Available Data</div>
+            <p>
+                All data on this website is available to be licensed: Pricing typically ranges from €5–€50 depending on dataset size and type. 
+                If you would like to get an exact quote, or request to purchase data, email us at 
+                <a href="mailto:georgeclune@clunesoftware.ie" class="email-link">georgeclune@clunesoftware.ie</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Licensing Terms</div>
+            <p>
+                If you have purchased our data you may use it for personal or commercial uses.<br>
+                Unauthorised use of our data without a valid licence is not permitted.
+            </p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Contact</div>
+            <p>
+                For pricing, custom requests, or commercial use cases, please contact:
+                <br><br>
+                <a href="mailto:georgeclune@clunesoftware.ie" class="email-link">georgeclune@clunesoftware.ie</a>
+            </p>
+        </div>
+
+    </div>
 
 <script>
 fetch("header.html")
-  .then(r => r.text())
-  .then(d => document.getElementById("header").innerHTML = d);
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById("header").innerHTML = data;
+  });
 
 fetch("footer.html")
   .then(r => r.text())
   .then(d => document.getElementById("footer").innerHTML = d);
 </script>
-
-<div class="page-wrapper">
-
-    <div class="content">
-
-        <h2>Data Licensing</h2>
-
-        <div style="background:white;padding:15px;border-radius:10px;margin-bottom:20px;
-                box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <b>Licensing Overview</b><br>
-            Éirelytics provides access to high‑quality geographic and statistical datasets.
-            All datasets can be licensed for commercial or research use.
-        </div>
-
-        <div class="info-container">
-            <div class="info-box">Datasets Available: All</div>
-            <div class="info-box">Pricing Range: €5–€50</div>
-            <div class="info-box">Custom Exports: Yes</div>
-            <div class="info-box">Last Updated: May 2026</div>
-        </div>
-
-        <h3>Available Data</h3>
-        <p>
-            All datasets on this website are available for licensing. Pricing varies depending on dataset size and type.
-            For exact pricing or bulk access, contact:
-            <br><br>
-            <a href="mailto:georgeclune@clunesoftware.ie" class="email-link">georgeclune@clunesoftware.ie</a>
-        </p>
-
-        <h3>Licensing Terms</h3>
-        <p>
-            Licensed data may be used for personal, academic, or commercial purposes.
-            Redistribution without a valid licence is not permitted.
-        </p>
-
-        <h3>Contact</h3>
-        <p>
-            For pricing, custom exports, or commercial licensing:
-            <br><br>
-            <a href="mailto:georgeclune@clunesoftware.ie" class="email-link">georgeclune@clunesoftware.ie</a>
-        </p>
-
-    </div>
-
-</div>
 
 <div id="footer"></div>
 
