@@ -83,28 +83,23 @@
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
-}
-     @media (max-width: 700px) {
-
-    /* Force all text and content to wrap properly */
-    body, p, h1, h2, h3, h4, h5 {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-           html, body {
-        width: 100%;
+        
+@media (max-width: 700px) {
+    .content {
         max-width: 100%;
-        overflow-x: hidden;
+        margin: 20px 0;
+        padding: 10px 15px;
     }
 
-    /* Force ALL elements to shrink inside the screen */
-    * {
-        max-width: 100% !important;
-        box-sizing: border-box;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
+    .info-container {
+        padding: 0 15px;
+    }
+
+    .map-container {
+        padding: 10px;
     }
 }
+
 
   
     
