@@ -36,12 +36,14 @@
             font-size: 18px;
         }
 
-        .section-title {
+       .section-title {
     text-align: center;
-    margin: 0 0 5px; /* remove ALL top margin */
+    margin-top: 40px;   /* NEW: spacing from header */
+    margin-bottom: 10px;
     font-size: 26px;
     font-weight: bold;
 }
+
 
 #header {
     display: block;
@@ -53,10 +55,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 35px; /* spacing between cards */
-    padding: 20px;
+    padding: 20px; /* spacing around the grid */
     max-width: 1200px;
     margin: auto;
 }
+
 
 .card {
     background: white;
