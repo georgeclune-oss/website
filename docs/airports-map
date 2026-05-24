@@ -1,0 +1,185 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "All Spaceports in the World",
+  "description": "A complete dataset and interactive map of all 86 Spaceports throughout the entire world.",
+  "creator": {
+    "@type": "Person",
+    "name": "George Clune"
+  },
+  "keywords": "global spaceports, rocket launch sites, all spaceports, launch pads in the world, all rocket launch sites"
+}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6139547779947241"
+     crossorigin="anonymous"></script>
+    
+    <title>All Rocket Launch Sites – Interactive Map of All Spaceports in the World</title>
+
+<meta name="description" content="Explore an interactive map of all 86 rocket launch sites in the world. Including every country and separated into orbital and non‑orbital sites.">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            font-family: Montserrat, sans-serif;
+            background: #f5f5f5;
+        }
+
+       .content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+        .map-container {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .info-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .info-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            font-size: 18px;
+        }
+         
+
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Force all elements to stay inside screen */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+        
+@media (max-width: 700px) {
+    .content {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 10px 15px;
+    }
+
+    .info-container {
+        padding: 0 15px;
+    }
+
+    .map-container {
+        padding: 10px;
+    }
+}
+
+
+  
+    
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<script>
+fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById("header").innerHTML = data;
+  });
+    fetch("footer.html")
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById("footer").innerHTML = data;
+  });
+</script>
+
+<div class="page-wrapper">
+
+    <div class="content">
+
+        <h2>Interactive Map of all Rocket Launch Sites on Earth (Spaceports)</h2>
+
+        <div style="background:white;padding:15px;border-radius:10px;margin-bottom:20px;
+                box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+            <b>Map Details</b><br>
+            There are 86 known spaceports in the world. 68 are capable of launching rockets into Earth orbit. 
+            This map contains all rocket launch sites in the world and is divided into suborbital and orbital capabilities.
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://georgeclune-oss.github.io/website/qgis2web_2026_05_10-17_03_14_824211/"></iframe>
+        </div>
+
+        <div class="info-container">
+            <div class="info-box">Total Spaceports: 86</div>
+            <div class="info-box">Countries Covered: 195</div>
+            <div class="info-box">Last Updated: May 2026</div>
+        </div>
+
+        <h3>How Many Spaceports Are There in the World?</h3>
+        <p>
+            There are 86 rocket launch facilities across the globe, including orbital, sub‑orbital, research, and experimental launch facilities.
+            This dataset combines OpenStreetMap data, aerospace classifications, historical records, and manual verification to ensure accuracy.
+        </p>
+
+        <h3>Organisations / Nations Included</h3>
+        <p>
+            The map includes all organisational and national space launch facilities. 
+            Organisations include SpaceX, Blue Origin, Rocket Lab, and others. 
+            National agencies include NASA, Roscosmos, CNSA, JAXA, ESA, ISRO, and more.
+        </p>
+
+        <h2>Spaceport Statistics by Region</h2>
+        <h3>Spaceports in USA</h3>
+        <h3>Spaceports in China</h3>
+        <h3>Spaceports in Russia</h3>
+        <h3>Spaceports in Europe</h3>
+
+        <h2>Data Sources and Methodology</h2>
+        <p>
+            Data was sourced from OpenStreetMap, independent aerospace sources, satellite imagery, and manual corrections. 
+            The map was generated using QGIS and exported using qgis2web.
+        </p>
+
+    </div>
+
+</div>
+<div id="footer"></div>
+</body>
+</html>
